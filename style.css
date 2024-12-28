@@ -1,0 +1,355 @@
+/* 通用样式 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #f0f4f8, #e8eff1);
+  color: #333;
+  line-height: 1.6;
+  font-size: 18px;
+}
+
+/* 容器 */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px;
+}
+
+/* 页眉 */
+header {
+  background: linear-gradient(90deg, #2980b9, #6dd5ed);
+  color: #fff;
+  text-align: center;
+  padding: 100px 0;
+  border-radius: 0 0 50% 50%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+header:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: #f39c12;
+  border-radius: 50%;
+}
+
+.profile-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.profile-img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 30px;
+  border: 5px solid #f39c12;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.profile-img:hover {
+  transform: scale(1.1);
+}
+
+h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #fff;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  margin-top: 20px;
+}
+
+/* 个人介绍部分 */
+.intro {
+  background: #fff;
+  padding: 60px 40px;
+  margin-bottom: 60px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s ease-out;
+}
+
+.intro h2 {
+  font-size: 2.8rem;
+  color: #2980b9;
+  margin-bottom: 20px;
+  font-family: 'Helvetica', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.intro p {
+  font-size: 1.3rem;
+  line-height: 1.8;
+  color: #7f8c8d;
+  font-style: italic;
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+}
+
+.intro p:last-child {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/* 教育背景部分 */
+.education {
+  background: #fff;
+  padding: 60px 40px;
+  margin-bottom: 60px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.education h2 {
+  font-size: 2.8rem;
+  color: #2980b9;
+  margin-bottom: 20px;
+  font-family: 'Helvetica', sans-serif;
+  text-transform: uppercase;
+}
+
+.education ul {
+  list-style-type: none;
+  font-size: 1.2rem;
+}
+
+.education li {
+  margin-bottom: 15px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.education li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #f39c12;
+  font-size: 1.8rem;
+}
+
+/* 技能部分 */
+.skills {
+  background: #fff;
+  padding: 60px 40px;
+  margin-bottom: 60px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.skills h2 {
+  font-size: 2.8rem;
+  color: #2980b9;
+  margin-bottom: 20px;
+  font-family: 'Helvetica', sans-serif;
+  text-transform: uppercase;
+}
+
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.skill-item {
+  background: #ecf0f1;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.skill-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.skill-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.skill-item:hover .skill-icon {
+  transform: scale(1.1);
+}
+
+.skill-item h3 {
+  font-size: 1.8rem;
+  color: #2c3e50;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.skill-item p {
+  font-size: 1.1rem;
+  color: #7f8c8d;
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+}
+
+/* 联系我表单部分 */
+.contact-form {
+  background: #fff;
+  padding: 60px 40px;
+  margin-bottom: 60px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+  font-size: 2.8rem;
+  color: #2980b9;
+  margin-bottom: 20px;
+  font-family: 'Helvetica', sans-serif;
+  text-transform: uppercase;
+}
+
+.contact-form .form-group {
+  margin-bottom: 25px;
+}
+
+.contact-form label {
+  font-size: 1.3rem;
+  color: #2980b9;
+  margin-bottom: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 20px;
+  font-size: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease-in-out;
+  background: #f7f9f9;
+  margin-bottom: 15px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #3498db;
+  outline: none;
+  box-shadow: 0 0 8px rgba(52, 152, 219, 0.2);
+}
+
+.contact-form button {
+  padding: 16px 40px;
+  background: #2980b9;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.contact-form button:hover {
+  background-color: #3498db;
+}
+
+/* 页脚样式 */
+footer {
+  text-align: center;
+  padding: 25px;
+  background-color: #34495e;
+  color: #fff;
+  font-size: 1.1rem;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  letter-spacing: 1px;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 动画效果 */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* 联系方式部分 */
+.contact {
+  background: #fff;
+  padding: 50px 40px;
+  margin: 60px 0;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  animation: fadeIn 1s ease-out;
+}
+
+.contact h2 {
+  font-size: 2.8rem;
+  color: #2980b9;
+  margin-bottom: 20px;
+  font-family: 'Helvetica', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.contact p {
+  font-size: 1.3rem;
+  color: #7f8c8d;
+  margin-bottom: 15px;
+  line-height: 1.8;
+  letter-spacing: 0.5px;
+}
+
+.contact a {
+  font-size: 1.3rem;
+  color: #3498db;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.contact a:hover {
+  color: #2980b9;
+  text-decoration: underline;
+}
+
+.contact a:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+/* 小屏幕适配 */
+@media (max-width: 768px) {
+  .contact h2 {
+    font-size: 2.5rem;
+  }
+
+  .contact p {
+    font-size: 1.2rem;
+  }
+
+  .contact a {
+    font-size: 1.2rem;
+  }
+}
